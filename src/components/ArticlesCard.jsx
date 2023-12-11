@@ -1,6 +1,8 @@
 import { Card, Col } from "react-bootstrap";
 
 export function ArticlesCard({ article }) {
+  const formattedDate = new Date(article.created_at).toLocaleString();
+
   return (
     <Col className="d-flex" style={{ margin: "10px" }}>
       <Card className="flex-fill">
@@ -11,7 +13,7 @@ export function ArticlesCard({ article }) {
           <Card.Text>Topic: {article.topic}</Card.Text>
           <Card.Text>Votes: {article.votes}</Card.Text>
           <Card.Text>Comments: {article.comment_count}</Card.Text>
-          <Card.Text>Created_at: {article.created_at}</Card.Text>
+          <Card.Text>Created_at: {formattedDate}</Card.Text>
         </Card.Body>
       </Card>
     </Col>
