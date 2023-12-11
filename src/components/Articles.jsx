@@ -5,13 +5,19 @@ import { Row } from "react-bootstrap";
 
 export function Articles() {
   const [articles, setArticles] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     axios.get("https://sakhee-news.onrender.com/api/articles").then((res) => {
       const { data } = res;
       setArticles(data.articles);
+      setIsLoading(false);
     });
   }, []);
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <section>
