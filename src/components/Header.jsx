@@ -1,3 +1,7 @@
 export function Header() {
-  return <h1>Sakhee News</h1>;
+  return (
+    <header>
+      <h1>Sakhee News</h1>
+    </header>
+  );
 }

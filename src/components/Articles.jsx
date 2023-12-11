@@ -14,11 +14,13 @@ export function Articles() {
   }, []);
 
   return (
-    <Row lg={3}>
-      <h2>articles</h2>
-      {articles.map((article) => {
-        return <ArticlesCard key={article.article_id} article={article} />;
-      })}
-    </Row>
+    <section>
+      <Row lg={3}>
+        <h2>articles</h2>
+        {articles.map((article) => {
+          return <ArticlesCard key={article.article_id} article={article} />;
+        })}
+      </Row>
+    </section>
   );
 }
