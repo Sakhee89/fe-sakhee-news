@@ -9,9 +9,9 @@ export function ArticleCard({ article }) {
         <Card.Body>
           <Card.Text>Author: {article.author}</Card.Text>
           <Card.Text>Topic: {article.topic}</Card.Text>
-          <Card.Text>Created_at: {article.created_at}</Card.Text>
           <Card.Text>Votes: {article.votes}</Card.Text>
           <Card.Text>Comments: {article.comment_count}</Card.Text>
+          <Card.Text>Created_at: {article.created_at}</Card.Text>
         </Card.Body>
       </Card>
     </Col>
