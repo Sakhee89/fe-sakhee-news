@@ -3342,8 +3342,8 @@
     },
     {
       "type": "text",
-      "version": 67,
-      "versionNonce": 1825131658,
+      "version": 68,
+      "versionNonce": 526072074,
       "isDeleted": false,
       "id": "nJPurEjOeP6dvN4j0B7rW",
       "fillStyle": "solid",
@@ -3374,9 +3374,13 @@
         {
           "id": "MTehx5XFpOThx-p-wbzHG",
           "type": "arrow"
+        },
+        {
+          "id": "RDLlxgZ49lzZGYN1xNhPj",
+          "type": "arrow"
         }
       ],
-      "updated": 1702298578695,
+      "updated": 1702305884940,
       "link": null,
       "locked": false,
       "fontSize": 16,
@@ -3391,8 +3395,8 @@
     },
     {
       "type": "arrow",
-      "version": 130,
-      "versionNonce": 928409814,
+      "version": 310,
+      "versionNonce": 616128138,
       "isDeleted": false,
       "id": "RDLlxgZ49lzZGYN1xNhPj",
       "fillStyle": "solid",
@@ -3401,12 +3405,12 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": 844.3310426603173,
-      "y": 1326.4571963674218,
+      "x": 927.7596489661207,
+      "y": 1084.1715169589397,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
-      "width": 99.38619425977879,
-      "height": 104.54280363257817,
+      "width": 18.243267362457345,
+      "height": 351.40005984072536,
       "seed": 917065622,
       "groupIds": [],
       "frameId": null,
@@ -3414,18 +3418,18 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1702298578696,
+      "updated": 1702305917543,
       "link": null,
       "locked": false,
       "startBinding": {
-        "elementId": "YvTYYrS4xW-NC7b3dH9LV",
-        "focus": -0.5971713365429955,
-        "gap": 7.3203125
+        "elementId": "nJPurEjOeP6dvN4j0B7rW",
+        "focus": 0.046136926927741545,
+        "gap": 1
       },
       "endBinding": {
         "elementId": "JTZAlDQOK13jTUKDrYz27",
-        "focus": 0.6840718828628608,
-        "gap": 11
+        "focus": 0.20508504849912929,
+        "gap": 6.428423200334919
       },
       "lastCommittedPoint": null,
       "startArrowhead": null,
@@ -3436,15 +3440,15 @@
           0
         ],
         [
-          99.38619425977879,
-          104.54280363257817
+          18.243267362457345,
+          351.40005984072536
         ]
       ]
     },
     {
       "type": "text",
-      "version": 14,
-      "versionNonce": 1769922070,
+      "version": 16,
+      "versionNonce": 1713806538,
       "isDeleted": false,
       "id": "JTZAlDQOK13jTUKDrYz27",
       "fillStyle": "solid",
@@ -3469,15 +3473,15 @@
           "type": "arrow"
         },
         {
-          "id": "RDLlxgZ49lzZGYN1xNhPj",
+          "id": "U8qH2NQ3H-3MpLlkL3JwS",
           "type": "arrow"
         },
         {
-          "id": "U8qH2NQ3H-3MpLlkL3JwS",
+          "id": "RDLlxgZ49lzZGYN1xNhPj",
           "type": "arrow"
         }
       ],
-      "updated": 1702298578696,
+      "updated": 1702305904238,
       "link": null,
       "locked": false,
       "fontSize": 16,
@@ -4850,6 +4854,42 @@
       "baseline": 14,
       "containerId": null,
       "originalText": "state:topics",
+      "lineHeight": 1.15
+    },
+    {
+      "id": "OLo3VgjYsJ0_DOPTrNiLv",
+      "type": "text",
+      "x": 977.4288504464287,
+      "y": 1426.8569423130577,
+      "width": 84.484375,
+      "height": 18.4,
+      "angle": 0,
+      "strokeColor": "#e03131",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": null,
+      "seed": 1387264342,
+      "version": 15,
+      "versionNonce": 1242527114,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1702305924107,
+      "link": null,
+      "locked": false,
+      "text": "State:article",
+      "fontSize": 16,
+      "fontFamily": 2,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 14,
+      "containerId": null,
+      "originalText": "State:article",
       "lineHeight": 1.15
     }
   ],
