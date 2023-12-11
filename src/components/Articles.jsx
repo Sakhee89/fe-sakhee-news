@@ -22,7 +22,7 @@ export function Articles() {
   return (
     <section>
       <Row lg={3}>
-        <h2>articles</h2>
+        <h2>Articles</h2>
         {articles.map((article) => {
           return <ArticlesCard key={article.article_id} article={article} />;
         })}
