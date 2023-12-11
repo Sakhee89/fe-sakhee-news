@@ -1,6 +1,6 @@
 import { Card, Col } from "react-bootstrap";
 
-export function ArticleCard({ article }) {
+export function ArticlesCard({ article }) {
   return (
     <Col className="d-flex" style={{ margin: "10px" }}>
       <Card className="flex-fill">

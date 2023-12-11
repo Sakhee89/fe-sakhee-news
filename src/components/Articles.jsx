@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ArticleCard } from "./ArticleCard";
+import { ArticlesCard } from "./ArticlesCard";
 import { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
 
@@ -17,7 +17,7 @@ export function Articles() {
     <Row lg={3}>
       <h2>articles</h2>
       {articles.map((article) => {
-        return <ArticleCard key={article.article_id} article={article} />;
+        return <ArticlesCard key={article.article_id} article={article} />;
       })}
     </Row>
   );
