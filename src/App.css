@@ -4,3 +4,12 @@
   padding: 2rem;
   text-align: center;
 }
+
+.comment-section {
+  border: solid;
+}
+
+.comment-body {
+  border-top: dotted;
+  border-bottom: dotted;
+}
