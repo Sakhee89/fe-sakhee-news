@@ -53,8 +53,8 @@ export function ArticleCard({ article }) {
           >
             Downvote
           </Button>
-        </Card.Body>{" "}
-      </Card>{" "}
+        </Card.Body>
+      </Card>
       {error ? <p>Something went wrong, your vote did not register</p> : null}
     </article>
   );
