@@ -9,7 +9,7 @@ export function ArticlesCard({ article }) {
       <Col className="d-flex" style={{ margin: "10px" }}>
         <Card className="flex-fill">
           <Card.Body>
-            <Card.Title>Article Title: {article.title}</Card.Title>
+            <Card.Title>{article.title}</Card.Title>
             <Card.Img variant="top" src={article.article_img_url} />
             <Card.Text>Author: {article.author}</Card.Text>
             <Card.Text>Topic: {article.topic}</Card.Text>
