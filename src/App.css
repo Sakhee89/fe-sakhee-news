@@ -13,3 +13,10 @@
   border-top: dotted;
   border-bottom: dotted;
 }
+
+#downvote-button {
+  background-color: red;
+}
+#upvote-button {
+  background-color: blue;
+}
