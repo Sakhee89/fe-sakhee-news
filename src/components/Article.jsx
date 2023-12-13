@@ -16,7 +16,7 @@ export function Article() {
       setArticle(data.article);
       setIsLoading(false);
     });
-  }, []);
+  }, [article_id, setArticle, setIsLoading]);
 
   if (isLoading) {
     return <p>Loading...</p>;
