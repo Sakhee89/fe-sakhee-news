@@ -1,4 +1,6 @@
-export function CommentsCard({ comment }) {
+import { DeleteButton } from "./DeleteButton";
+
+export function CommentsCard({ comment, setComments }) {
   const formattedDate = new Date(comment.created_at).toLocaleString();
 
   return (
@@ -7,6 +9,7 @@ export function CommentsCard({ comment }) {
       <article className="comment-body">{comment.body}</article>
       <p>votes: {comment.votes}</p>
       <p>{formattedDate}</p>
+      <DeleteButton comment={comment} setComments={setComments} />
     </section>
   );
 }

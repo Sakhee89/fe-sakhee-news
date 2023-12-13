@@ -20,7 +20,13 @@ export function Comments({ article_id, comments, setComments }) {
   return (
     <section>
       {comments.map((comment) => {
-        return <CommentsCard key={comment.comment_id} comment={comment} />;
+        return (
+          <CommentsCard
+            key={comment.comment_id}
+            comment={comment}
+            setComments={setComments}
+          />
+        );
       })}
     </section>
   );
