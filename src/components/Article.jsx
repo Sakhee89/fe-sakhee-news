@@ -4,8 +4,10 @@ import { ArticleCard } from "./ArticleCard";
 import { getArticleById } from "../utils/utils";
 import { Comments } from "./Comments";
 import { Collapsible } from "./Collapsible";
+import { CommentAdder } from "./CommentAdder";
 
 export function Article() {
+  const [comments, setComments] = useState({});
   const [article, setArticle] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const { article_id } = useParams();
@@ -25,8 +27,13 @@ export function Article() {
   return (
     <section>
       <ArticleCard article={article} />
+      <CommentAdder article_id={article.article_id} setComments={setComments} />
       <Collapsible descriptor="comments">
-        <Comments article_id={article.article_id} />
+        <Comments
+          article_id={article.article_id}
+          comments={comments}
+          setComments={setComments}
+        />
       </Collapsible>
     </section>
   );

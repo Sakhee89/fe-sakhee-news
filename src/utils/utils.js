@@ -15,3 +15,7 @@ export function getArticleById(article_id) {
 export function getCommentsByArticle(article_id) {
   return newsApi.get(`/articles/${article_id}/comments`);
 }
+
+export function postCommentsByArticleId(article_id, newComment) {
+  return newsApi.post(`/articles/${article_id}/comments`, newComment);
+}

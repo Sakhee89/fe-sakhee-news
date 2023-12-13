@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { getCommentsByArticle } from "../utils/utils";
 import { CommentsCard } from "./CommentsCard";
 
-export function Comments({ article_id }) {
-  const [comments, setComments] = useState({});
+export function Comments({ article_id, comments, setComments }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -12,7 +11,7 @@ export function Comments({ article_id }) {
       setComments(data.comments);
       setIsLoading(false);
     });
-  }, []);
+  }, [article_id, setComments, setIsLoading]);
 
   if (isLoading) {
     return <p>Loading...</p>;

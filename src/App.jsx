@@ -6,7 +6,6 @@ import { Articles } from "./components/Articles";
 import { Home } from "./components/Home";
 import { Header } from "./components/Header";
 import { Article } from "./components/Article";
-import { Comments } from "./components/Comments";
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/articles/:article_id" element={<Article />} />
-        <Route path="/articles/:article_id/comments" element={<Comments />} />
       </Routes>
     </>
   );
