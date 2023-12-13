@@ -23,3 +23,7 @@ export function postCommentsByArticleId(article_id, newComment) {
 export function deleteCommentsById(comment_id) {
   return newsApi.delete(`/comments/${comment_id}`);
 }
+
+export function patchArticleVotes(article_id, inc_votes) {
+  return newsApi.patch(`/articles/${article_id}`, inc_votes);
+}
