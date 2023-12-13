@@ -16,6 +16,10 @@ export function getCommentsByArticle(article_id) {
   return newsApi.get(`/articles/${article_id}/comments`);
 }
 
+export function postCommentsByArticleId(article_id, newComment) {
+  return newsApi.post(`/articles/${article_id}/comments`, newComment);
+}
+
 export function patchArticleVotes(article_id, inc_votes) {
   return newsApi.patch(`/articles/${article_id}`, inc_votes);
 }
