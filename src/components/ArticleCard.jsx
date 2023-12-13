@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export function ArticleCard({ article }) {
   const [votes, setVotes] = useState(article.votes);
+  const [voted, setVoted] = useState(0);
   const [error, setError] = useState(false);
   const formattedDate = new Date(article.created_at).toLocaleString();
 
@@ -21,6 +22,7 @@ export function ArticleCard({ article }) {
       .then((res) => {
         const { data } = res;
         setVotes(data.article.votes);
+        setVoted(voted + 1);
       })
       .catch((err) => {
         setError(true);
@@ -40,6 +42,7 @@ export function ArticleCard({ article }) {
           <Card.Text>Comments: {article.comment_count}</Card.Text>
           <Card.Text>Created_at: {formattedDate}</Card.Text>
           <Button
+            disabled={voted > 3}
             onClick={() => handleArticleVote("upvote")}
             id="upvote-button"
             variant="primary"
@@ -47,6 +50,7 @@ export function ArticleCard({ article }) {
             Upvote
           </Button>
           <Button
+            disabled={voted > 3}
             onClick={() => handleArticleVote("downvote")}
             id="downvote-button"
             variant="primary"
@@ -56,6 +60,7 @@ export function ArticleCard({ article }) {
         </Card.Body>
       </Card>
       {error ? <p>Something went wrong, your vote did not register</p> : null}
+      {voted > 3 ? <p>You have reached the maximum votes</p> : null}
     </article>
   );
 }
