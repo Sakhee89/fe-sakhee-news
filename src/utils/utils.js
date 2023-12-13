@@ -23,3 +23,11 @@ export function postCommentsByArticleId(article_id, newComment) {
 export function patchArticleVotes(article_id, inc_votes) {
   return newsApi.patch(`/articles/${article_id}`, inc_votes);
 }
+
+export function getTopics() {
+  return newsApi.get("/topics");
+}
+
+export function getArticlesByTopic(topic) {
+  return newsApi.get(`/articles?topic=${topic}`);
+}
