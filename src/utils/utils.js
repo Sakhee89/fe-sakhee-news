@@ -19,3 +19,7 @@ export function getCommentsByArticle(article_id) {
 export function postCommentsByArticleId(article_id, newComment) {
   return newsApi.post(`/articles/${article_id}/comments`, newComment);
 }
+
+export function deleteCommentsById(comment_id) {
+  return newsApi.delete(`/comments/${comment_id}`);
+}
