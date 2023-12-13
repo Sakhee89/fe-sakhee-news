@@ -31,10 +31,10 @@ export function DeleteButton({ comment, setComments }) {
       {comment.author === currentUser ? (
         <Button onClick={deleteComment}>Delete Comment</Button>
       ) : null}
-      {deleting ? <p>Deleting Comment</p> : null}
       {error ? (
         <p>Deleting comment was unsuccessful, please try again</p>
       ) : null}
+      {deleting ? <p>Deleting Comment</p> : null}
     </section>
   );
 }
