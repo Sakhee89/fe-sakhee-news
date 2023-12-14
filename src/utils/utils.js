@@ -13,10 +13,12 @@ export function getArticles(topic, sortby, order) {
     queryStr += `topic=${topic}`;
   }
   if (sortby) {
-    queryStr += `${topic ? "&" : null}sort_by=${sortby}`;
+    queryStr += topic ? "&" : "";
+    queryStr += `sort_by=${sortby}`;
   }
   if (order) {
-    queryStr += `${topic || sortby ? "&" : null}order=${order}`;
+    queryStr += topic || sortby ? "&" : "";
+    queryStr += `order=${order}`;
   }
   return newsApi.get(`/articles${queryStr}`);
 }
