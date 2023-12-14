@@ -2,13 +2,18 @@ import { ArticlesCard } from "./ArticlesCard";
 import { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
 import { getArticles } from "../utils/utils";
+import { useSearchParams } from "react-router-dom";
 
 export function Articles() {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const topicQuery = searchParams.get("topic");
+  const sortbyQuery = searchParams.get("sortby");
+  const orderQuery = searchParams.get("order");
 
   useEffect(() => {
-    getArticles().then((res) => {
+    getArticles(topicQuery, sortbyQuery, orderQuery).then((res) => {
       const { data } = res;
       setArticles(data.articles);
       setIsLoading(false);
