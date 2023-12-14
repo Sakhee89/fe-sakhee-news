@@ -11,7 +11,7 @@ export function NavBar() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <LinkContainer to="/articles">
-                <Nav.Link>Articles</Nav.Link>
+                <Nav.Link>Articles Page</Nav.Link>
               </LinkContainer>
             </Nav>
           </Navbar.Collapse>
