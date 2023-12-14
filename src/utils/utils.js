@@ -4,23 +4,8 @@ const newsApi = axios.create({
   baseURL: "https://sakhee-news.onrender.com/api",
 });
 
-export function getArticles(topic, sortby, order) {
-  let queryStr = "";
-  if (topic || sortby || order) {
-    queryStr += "?";
-  }
-  if (topic) {
-    queryStr += `topic=${topic}`;
-  }
-  if (sortby) {
-    queryStr += topic ? "&" : "";
-    queryStr += `sort_by=${sortby}`;
-  }
-  if (order) {
-    queryStr += topic || sortby ? "&" : "";
-    queryStr += `order=${order}`;
-  }
-  return newsApi.get(`/articles${queryStr}`);
+export function getArticles() {
+  return newsApi.get("/articles");
 }
 
 export function getArticleById(article_id) {
@@ -45,4 +30,8 @@ export function patchArticleVotes(article_id, inc_votes) {
 
 export function getTopics() {
   return newsApi.get("/topics");
+}
+
+export function getArticlesByTopic(topic) {
+  return newsApi.get(`/articles?topic=${topic}`);
 }

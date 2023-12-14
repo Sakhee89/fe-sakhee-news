@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { getArticles, getTopics } from "../utils/utils";
+import { getArticlesByTopic, getTopics } from "../utils/utils";
 import { Link, useParams } from "react-router-dom";
 import { ArticlesCard } from "./ArticlesCard";
 
-export function Topics({ sortbyQuery, orderQuery }) {
+export function Topics() {
   const [topics, setTopics] = useState([]);
   const { topic } = useParams();
   const [loading, setLoading] = useState(false);
@@ -19,7 +19,7 @@ export function Topics({ sortbyQuery, orderQuery }) {
   useEffect(() => {
     setLoading(true);
     if (topic) {
-      getArticles(topic, sortbyQuery, orderQuery).then((res) => {
+      getArticlesByTopic(topic).then((res) => {
         setLoading(false);
         setArticles(res.data.articles);
       });
@@ -36,7 +36,7 @@ export function Topics({ sortbyQuery, orderQuery }) {
         topics.map((topic) => {
           return (
             <Link key={topic.slug} to={`/topics/${topic.slug}`}>
-              <h2>{topic.slug}</h2>
+              <p>{topic.slug}</p>
             </Link>
           );
         })}
