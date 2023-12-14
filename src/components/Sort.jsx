@@ -33,7 +33,12 @@ export function Sort({
       <Form.Group>
         <Form.Label htmlFor="order">
           Order by:{" "}
-          <select name="order" size="1" onChange={handleOrderChange}>
+          <select
+            name="order"
+            size="1"
+            value={orderQuery}
+            onChange={handleOrderChange}
+          >
             <option value="asc">Ascending</option>
             <option value="desc">Descending</option>
           </select>
