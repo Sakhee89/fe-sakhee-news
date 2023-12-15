@@ -1,6 +1,6 @@
 ## Frontend Sakhee-News
 
-The app is Deployed here [Here](https://sakhee-news.netlify.app)
+The app is Deployed [Here](https://sakhee-news.netlify.app)
 
 ## Summary
 
