@@ -8,7 +8,7 @@ import { CommentAdder } from "./CommentAdder";
 import { Error } from "./Error";
 
 export function Article() {
-  const [comments, setComments] = useState();
+  const [comments, setComments] = useState([]);
   const [article, setArticle] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [apiError, setApiError] = useState(null);
