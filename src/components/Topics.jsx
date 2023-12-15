@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { getArticlesByTopic, getTopics } from "../utils/utils";
+import { getArticles, getTopics } from "../utils/utils";
 import { Link, useParams } from "react-router-dom";
 import { ArticlesCard } from "./ArticlesCard";
 import { Error } from "./Error";
 
-export function Topics() {
+export function Topics({ sortbyQuery, orderQuery }) {
   const [topics, setTopics] = useState([]);
   const { topic } = useParams();
   const [loading, setLoading] = useState(false);
