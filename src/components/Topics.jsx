@@ -3,20 +3,13 @@ import { getArticles, getTopics } from "../utils/utils";
 import { Link, useParams } from "react-router-dom";
 import { ArticlesCard } from "./ArticlesCard";
 import { Error } from "./Error";
+import { Row } from "react-bootstrap";
 
 export function Topics({ sortbyQuery, orderQuery }) {
-  const [topics, setTopics] = useState([]);
   const { topic } = useParams();
   const [loading, setLoading] = useState(false);
   const [articles, setArticles] = useState([]);
   const [apiError, setApiError] = useState(null);
-
-  useEffect(() => {
-    getTopics().then((res) => {
-      setLoading(false);
-      setTopics(res.data.topics);
-    });
-  }, []);
 
   useEffect(() => {
     setLoading(true);
@@ -45,19 +38,13 @@ export function Topics({ sortbyQuery, orderQuery }) {
 
   return (
     <section>
-      <h2>Topics</h2>
-      {!topic &&
-        topics.map((topic) => {
-          return (
-            <Link key={topic.slug} to={`/topics/${topic.slug}`}>
-              <p>{topic.slug}</p>
-            </Link>
-          );
-        })}
-      {topic &&
-        articles.map((article) => {
-          return <ArticlesCard key={article.article_id} article={article} />;
-        })}
+      <h2>{topic}</h2>
+      <Row lg={3}>
+        {topic &&
+          articles.map((article) => {
+            return <ArticlesCard key={article.article_id} article={article} />;
+          })}
+      </Row>
     </section>
   );
 }

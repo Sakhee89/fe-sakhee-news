@@ -8,10 +8,11 @@ import { Header } from "./components/Header";
 import { Article } from "./components/Article";
 import { Topics } from "./components/Topics";
 import { Error } from "./components/Error";
+import { Container } from "react-bootstrap";
 
 function App() {
   return (
-    <>
+    <Container>
       <Header />
       <NavBar />
       <Routes>
@@ -21,7 +22,7 @@ function App() {
         <Route path="/topics/:topic" element={<Topics />} />
         <Route path="/*" element={<Error message="Route not found" />} />
       </Routes>
-    </>
+    </Container>
   );
 }
 
