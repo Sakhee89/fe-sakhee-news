@@ -62,9 +62,18 @@ export function CommentAdder({ article_id, setComments }) {
       {newComment.body.length < 2 ? (
         <p>Please enter a comment more than 1 characters...</p>
       ) : null}
-      {error ? <p>Post Failed, Please try again...</p> : null}
+      {newComment.body.length > 50 ? <p>Message too Long!</p> : null}
+      {error ? (
+        <p>Post Failed, Please try again...</p>
+      ) : (
+        <p>{`${50 - newComment.body.length} characters remaining`}</p>
+      )}
       <Button
-        disabled={!currentUser || newComment.body.length < 2}
+        disabled={
+          !currentUser ||
+          newComment.body.length < 2 ||
+          newComment.body.length > 50
+        }
         variant="primary"
         type="submit"
       >

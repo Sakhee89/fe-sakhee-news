@@ -7,6 +7,7 @@ import { Home } from "./components/Home";
 import { Header } from "./components/Header";
 import { Article } from "./components/Article";
 import { Topics } from "./components/Topics";
+import { Error } from "./components/Error";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/articles" element={<Articles />} />
         <Route path="/articles/:article_id" element={<Article />} />
         <Route path="/topics/:topic" element={<Topics />} />
+        <Route path="/*" element={<Error message="Route not found" />} />
       </Routes>
     </>
   );
