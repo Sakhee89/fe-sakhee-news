@@ -45,6 +45,7 @@ export function Topics({ sortbyQuery, orderQuery }) {
 
   return (
     <section>
+      <h2>Topics</h2>
       {!topic &&
         topics.map((topic) => {
           return (

@@ -28,6 +28,7 @@ export function Articles({
 
   return (
     <section>
+      <h2>Articles</h2>
       <Sort
         sortbyQuery={sortbyQuery}
         orderQuery={orderQuery}
@@ -35,7 +36,6 @@ export function Articles({
         setOrderQuery={setOrderQuery}
       />
       <Row lg={3}>
-        <h2>Articles</h2>
         {articles.map((article) => {
           return <ArticlesCard key={article.article_id} article={article} />;
         })}
