@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { Articles } from "./Articles";
-import { Topics } from "./Topics";
 
 export function Home() {
   const [sortbyQuery, setSortbyQuery] = useState("votes");
   const [orderQuery, setOrderQuery] = useState("desc");
 
   return (
-    <section>
-      <Topics sortbyQuery={sortbyQuery} orderQuery={orderQuery} />
+    <section className="main-section">
       <Articles
         topicQuery={undefined}
         sortbyQuery={sortbyQuery}

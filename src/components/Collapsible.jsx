@@ -8,7 +8,7 @@ export function Collapsible({ children, descriptor }) {
   }
 
   return (
-    <div>
+    <div id="collapsible-button">
       <button onClick={toggleIsHidden}>
         {isHidden ? "Show" : "Hide"} {descriptor}
       </button>

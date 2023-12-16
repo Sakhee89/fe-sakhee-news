@@ -21,3 +21,59 @@
   background-color: blue;
 }
 
+#collapsible-button {
+  margin-top: 5px;
+}
+
+.nav {
+  background-color: lightcyan;
+}
+
+#main-header {
+  grid-column: 1/4;
+  grid-row: 1;
+  background: #a2d4fc;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+.card-img-top {
+  width: 50px;
+}
+
+.article-section {
+  margin-top: 5px;
+}
+
+/* .grid-container {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  gap: 10px;
+  grid-auto-rows: auto;
+}
+
+#main-header {
+  grid-column: 1/4;
+  grid-row: 1;
+  background: #e6b549;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+.nav {
+  grid-column: 1/4;
+  grid-row: 2;
+  padding: 2rem;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.main-section {
+  grid-row: 3/5;
+}
+
+.card-body {
+  margin-bottom: 0px;
+  padding: 0px;
+} */

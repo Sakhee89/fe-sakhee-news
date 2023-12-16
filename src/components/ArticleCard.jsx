@@ -30,10 +30,14 @@ export function ArticleCard({ article }) {
   }
 
   return (
-    <article>
+    <article className="article-section">
       <Card className="flex-fill">
         <Card.Title>{article.title}</Card.Title>
-        <Card.Img variant="top" src={article.article_img_url} />
+        <Card.Img
+          variant="top"
+          className="article-img"
+          src={article.article_img_url}
+        />
         <Card.Body>
           <Card.Text>Author: {article.author}</Card.Text>
           <Card.Text>Topic: {article.topic}</Card.Text>
