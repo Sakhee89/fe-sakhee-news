@@ -1,8 +1,10 @@
+import { Alert } from "react-bootstrap";
+
 export function Error({ message }) {
   return (
-    <div>
-      <h2>Error!</h2>
+    <Alert variant="danger" onClose={() => setShow(false)} dismissible>
+      <Alert.Heading>You got an error!</Alert.Heading>
       <p>{message}</p>
-    </div>
+    </Alert>
   );
 }
