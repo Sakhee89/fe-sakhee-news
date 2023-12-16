@@ -27,7 +27,9 @@ export function NavBar() {
             {loading ? <p>Loading list of Topics...</p> : null}
             {topics.map((topic) => (
               <LinkContainer key={topic.slug} to={`/topics/${topic.slug}`}>
-                <Nav.Link>{topic.slug}</Nav.Link>
+                <Nav.Link>
+                  {topic.slug[0].toUpperCase() + topic.slug.slice(1)}
+                </Nav.Link>
               </LinkContainer>
             ))}
           </Nav>

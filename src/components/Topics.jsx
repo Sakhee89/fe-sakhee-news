@@ -10,6 +10,7 @@ export function Topics({ sortbyQuery, orderQuery }) {
   const [loading, setLoading] = useState(false);
   const [articles, setArticles] = useState([]);
   const [apiError, setApiError] = useState(null);
+  const capitalTopic = topic[0].toUpperCase() + topic.slice(1);
 
   useEffect(() => {
     setLoading(true);
@@ -38,7 +39,7 @@ export function Topics({ sortbyQuery, orderQuery }) {
 
   return (
     <section>
-      <h2>{topic}</h2>
+      <h2>{capitalTopic}</h2>
       <Row lg={3}>
         {topic &&
           articles.map((article) => {
