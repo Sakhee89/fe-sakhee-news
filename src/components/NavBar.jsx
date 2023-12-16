@@ -5,10 +5,12 @@ import { getTopics } from "../utils/utils";
 
 export function NavBar() {
   const [topics, setTopics] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     getTopics().then((res) => {
       setTopics(res.data.topics);
+      setLoading(false);
     });
   }, []);
 
@@ -22,6 +24,7 @@ export function NavBar() {
             <LinkContainer to="/articles">
               <Nav.Link>Articles Page</Nav.Link>
             </LinkContainer>{" "}
+            {loading ? <p>Loading list of Topics...</p> : null}
             {topics.map((topic) => (
               <LinkContainer key={topic.slug} to={`/topics/${topic.slug}`}>
                 <Nav.Link>{topic.slug}</Nav.Link>
