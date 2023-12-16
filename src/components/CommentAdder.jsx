@@ -60,7 +60,7 @@ export function CommentAdder({ article_id, setComments }) {
       </Form.Group>
       {!currentUser ? <p>Log in to post a comment...</p> : null}
       {newComment.body.length < 2 ? (
-        <p>Please enter a comment more than 1 characters...</p>
+        <p>Please enter a comment more than 1 characters long...</p>
       ) : null}
       {newComment.body.length > 50 ? <p>Message too Long!</p> : null}
       {error ? (

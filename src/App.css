@@ -21,6 +21,30 @@
   background-color: blue;
 }
 
+#collapsible-button {
+  margin-top: 5px;
+}
+
+.nav {
+  background-color: lightcyan;
+}
+
+#main-header {
+  grid-column: 1/4;
+  grid-row: 1;
+  background: #f18a46;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+.article-img {
+  width: 200px;
+}
+
+.article-section {
+  margin-top: 5px;
+}
+
 /* .grid-container {
   display: grid;
   grid-template-columns: 200px 1fr 1fr;
