@@ -35,7 +35,7 @@ export function ArticleCard({ article }) {
         <Card.Title>{article.title}</Card.Title>
         <Card.Img
           variant="top"
-          className="article-img"
+          className="article-img img-fluid w-50 mx-auto d-block"
           src={article.article_img_url}
         />
         <Card.Body>
