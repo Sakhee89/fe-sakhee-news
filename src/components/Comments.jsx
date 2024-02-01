@@ -14,7 +14,7 @@ export function Comments({ article_id, comments, setComments }) {
   }, [article_id, setComments, setIsLoading]);
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <p>Loading comments...</p>;
   }
 
   return (

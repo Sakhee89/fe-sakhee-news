@@ -27,9 +27,11 @@ export function DeleteButton({ comment, setComments }) {
   }
 
   return (
-    <section>
+    <section id="delete-comment">
       {comment.author === currentUser ? (
-        <Button onClick={deleteComment}>Delete Comment</Button>
+        <Button onClick={deleteComment} className="btn btn-danger">
+          Delete Comment
+        </Button>
       ) : null}
       {error ? (
         <p>Deleting comment was unsuccessful, please try again</p>

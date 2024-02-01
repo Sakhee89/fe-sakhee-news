@@ -23,7 +23,7 @@ export function Articles({
   }, [topicQuery, sortbyQuery, orderQuery]);
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <p>Page loading...</p>;
   }
 
   return (

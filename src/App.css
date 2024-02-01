@@ -7,11 +7,10 @@
 
 .comment-section {
   border: solid;
-}
-
-.comment-body {
-  border-top: dotted;
-  border-bottom: dotted;
+  margin-top: 5px;
+  width: 50%; /* Initially, the box takes half the width of its parent container */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #downvote-button {
@@ -39,4 +38,32 @@
 
 .article-section {
   margin-top: 5px;
+}
+
+#logged {
+  text-align: right;
+  font-size: 10px;
+}
+
+.comment-title {
+  font-size: 21px;
+  font-style: italic;
+}
+
+#delete-comment {
+  margin-bottom: 10px;
+}
+
+.comment-body {
+  border-bottom: solid;
+  padding-bottom: 10px;
+}
+
+#comment-time {
+  font-size: 12px;
+}
+
+.votes {
+  font-weight: bold;
+  color: rgb(7, 87, 72);
 }

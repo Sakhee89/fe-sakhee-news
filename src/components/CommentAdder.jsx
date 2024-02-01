@@ -44,7 +44,7 @@ export function CommentAdder({ article_id, setComments }) {
   }
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form className="mt-3" onSubmit={handleSubmit}>
       <Form.Group className="mb-3">
         <Form.Label htmlFor="body">
           Add Comment

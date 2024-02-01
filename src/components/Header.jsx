@@ -9,6 +9,7 @@ export function Header() {
       <Row>
         <Col>
           {" "}
+          <p id="logged">You are logged in as: {currentUser}</p>
           <h1>Sakhee News</h1>
         </Col>
       </Row>

@@ -30,20 +30,20 @@ export function ArticleCard({ article }) {
   }
 
   return (
-    <article className="article-section">
-      <Card className="flex-fill">
-        <Card.Title>{article.title}</Card.Title>
+    <article className="article-section d-flex justify-content-center">
+      <Card className="w-75">
+        <Card.Title className="mt-3">{article.title}</Card.Title>
         <Card.Img
           variant="top"
           className="article-img img-fluid w-50 mx-auto d-block"
           src={article.article_img_url}
         />
         <Card.Body>
-          <Card.Text>Author: {article.author}</Card.Text>
+          <Card.Text>Written by {article.author}</Card.Text>
           <Card.Text>Topic: {article.topic}</Card.Text>
           <Card.Text> {article.body}</Card.Text>
           <Card.Text>Votes: {votes} </Card.Text>
-          <Card.Text>Comments: {article.comment_count}</Card.Text>
+          <Card.Text>Total Comments: {article.comment_count}</Card.Text>
           <Card.Text>Created_at: {formattedDate}</Card.Text>
           <Button
             disabled={voted > 3}
