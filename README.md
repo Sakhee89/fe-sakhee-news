@@ -4,8 +4,9 @@ The app is Deployed [Here](https://sakhee-news.netlify.app)
 
 ## Summary
 
-This acts very similar to a news site. You can view all the articles posted by different users, add and remove comments for each articles, and vote on
-that article.
+The project is built using JavaScript, React and Bootstrap.
+
+This acts very similar to a news site. You can view all the articles posted by different users, add and remove comments for each articles, and vote on that article.
 
 Users are able to filter the articles by topics, sort the articles by comment count, votes, or date created, in both ascending or descending order.
 
@@ -21,4 +22,4 @@ Run the development server with the command npm run dev
 
 ## Versions
 
-This is supported with Node v20.5.0
+This is supported with Node v20.5.0 and React v18.2.0
