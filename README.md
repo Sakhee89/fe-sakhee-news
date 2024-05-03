@@ -18,6 +18,8 @@ The link to the backend can be found here https://github.com/Sakhee89/sakhee-ser
 
 To clone the repo use the command git clone https://github.com/Sakhee89/fe-sakhee-news.
 
+Next, install the dependencies and devDependencies by using the command npm install
+
 Run the development server with the command npm run dev
 
 ## Versions

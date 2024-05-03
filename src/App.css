@@ -8,7 +8,7 @@
 .comment-section {
   border: solid;
   margin-top: 5px;
-  width: 50%; /* Initially, the box takes half the width of its parent container */
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
 }

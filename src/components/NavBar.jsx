@@ -1,19 +1,7 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import { useEffect, useState } from "react";
-import { getTopics } from "../utils/utils";
 
 export function NavBar() {
-  const [topics, setTopics] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    getTopics().then((res) => {
-      setTopics(res.data.topics);
-      setLoading(false);
-    });
-  }, []);
-
   return (
     <Navbar expand="lg" className="bg-body-tertiary nav">
       <Container>
@@ -23,15 +11,16 @@ export function NavBar() {
           <Nav className="me-auto">
             <LinkContainer to="/articles">
               <Nav.Link>Articles Page</Nav.Link>
-            </LinkContainer>{" "}
-            {loading ? <p>Loading list of Topics...</p> : null}
-            {topics.map((topic) => (
-              <LinkContainer key={topic.slug} to={`/topics/${topic.slug}`}>
-                <Nav.Link>
-                  {topic.slug[0].toUpperCase() + topic.slug.slice(1)}
-                </Nav.Link>
-              </LinkContainer>
-            ))}
+            </LinkContainer>
+            <LinkContainer to="/topics/coding">
+              <Nav.Link>Coding</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/topics/football">
+              <Nav.Link>Football</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/topics/cooking">
+              <Nav.Link>Cooking</Nav.Link>
+            </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Container>
