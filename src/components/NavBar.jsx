@@ -3,7 +3,7 @@ import { LinkContainer } from "react-router-bootstrap";
 
 export function NavBar() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary nav">
+    <Navbar expand="lg" className="bg-body-tertiary nav fw-bold">
       <Container>
         <Navbar.Brand href="/">Home</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
